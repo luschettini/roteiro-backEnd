@@ -3,8 +3,8 @@ const UserList = require("../models/UserList");
 const lista = new UserList();
 
 // Adicionando usuários iniciais
-lista.addUser(new User("João Silva", "joao@example.com", 30));
-lista.addUser(new User("Maria Souza", "maria@example.com", 25));
+lista.addUser(new User("João Vitor", "joao@example.com", 30));
+lista.addUser(new User("Luiza", "luiza@example.com", 25));
 
 const router = {
   getAllUsers: (req, res) => {
