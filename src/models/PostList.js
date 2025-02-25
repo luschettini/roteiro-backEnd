@@ -1,29 +1,29 @@
 class PostList {
-    constructor () {
+    constructor() {
         this.posts = [];
     }
 
-    addPost (post) {
+    addPost(post) {
         this.posts.push(post);
     }
 
-    getAllPosts () {
+    getAllPosts() {
         return this.posts;
     }
 
-    getPostById (id) {
+    getPostById(id) {
         const post = this.posts.find(post => post.id == id);
-        if (!post) throw new Error ("Esse post não existe nossa rede ");
+        if (!post) throw new Error("Esse post não existe em nossa rede");
         return post;
     }
 
-    updatePost (id, updatedData) {
+    updatePost(id, updatedData) {
         const post = this.getPostById(id);
         Object.assign(post, updatedData);
         return post;
     }
 
-    deletePost (id) {
+    deletePost(id) {
         this.posts = this.posts.filter(post => post.id != id);
     }
 }
